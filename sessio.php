@@ -9,19 +9,13 @@
     <script src="main.js"></script>
 </head>
 <body>
-  <h1>Person info</h1>
-  Post array: <br>
-  <?php 
-  print_r($_POST);
-  ?>
-  <br>
-  Firstname is <?php echo($_POST['fname'])  ?> <br>
-  Lastname is <?php echo($_POST['lname'])  ?> 
-  <?php
-  session_start();
-  $_SESSION['firstname']=$_POST['fname'];
-  $_SESSION['lastname']=$_POST['lname'];
-  ?> 
-  <a href="sessio.php">Press</a>
+    <h1>Profile</h1>
+<?php
+session_start();
+echo'Firstname '.$_SESSION['firstname'].'<br>';
+echo'Lastname '.$_SESSION['lastname'].'<br>';
+
+?>
+
 </body>
 </html>
